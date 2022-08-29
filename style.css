@@ -1,0 +1,141 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  --font_clr:black;
+  --clr_lt1:hsl(56 100% 89%);
+  --clr_lt2:hsl(51 98% 52%);
+  --clr_dk1:hsl(340, 44%, 12%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--font_clr);
+}
+
+html {
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+body {
+  height: 200vh;
+  background-color: var(--clr_dk1);
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 15vh;
+  padding: 0rem 1rem 0rem 1rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  z-index: 100;
+}
+nav > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-top {
+  height: 65%;
+}
+.nav-top img {
+  height: 80%;
+}
+
+.navlist {
+  display: flex;
+  gap: 2.5rem;
+}
+.navlist li {
+  list-style: none;
+}
+.navlist li a {
+  text-decoration: none;
+  color: var(--font_clr);
+}
+
+.menu-sandwich {
+  display: none;
+  cursor: pointer;
+  background-color: var(--font_clr);
+  border-radius: 30px;
+  box-shadow: 0px 12px 0px 0px var(--font_clr), 0px -12px 0px 0px var(--font_clr);
+  width: 40px;
+  height: 5px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 960px) {
+  .navlist {
+    display: none;
+    flex-direction: column;
+    width: 50vw;
+    height: 100vh;
+    padding-top: 15vh;
+    text-align: center;
+    right: 0px;
+    top: 0;
+    position: absolute;
+    background-color: var(--clr_lt2);
+    z-index: 1;
+  }
+  .active {
+    display: flex;
+  }
+  .menu-sandwich {
+    display: block;
+  }
+}
+.nav-bottom {
+  height: 35%;
+}
+.nav-bottom svg {
+  width: 16%;
+  height: 30px;
+}
+.nav-bottom svg:nth-child(1) {
+  transform-origin: left;
+}
+.nav-bottom svg:nth-child(3) {
+  transform-origin: right;
+}
+.nav-bottom svg rect {
+  fill: var(--font_clr);
+}
+.nav-bottom svg rect:nth-child(1) {
+  width: 100%;
+  height: 7px;
+}
+.nav-bottom svg rect:nth-child(2) {
+  width: 33%;
+  height: 7px;
+}
+.nav-bottom > img {
+  transform: translateY(163px);
+  width: 100px;
+  position: relative;
+  top: -12px;
+  cursor: pointer;
+}
+
+.Parallax {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--clr_lt1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.Parallax img {
+  position: absolute;
+  width: 1540px;
+  bottom: -100px;
+}/*# sourceMappingURL=style.css.map */
